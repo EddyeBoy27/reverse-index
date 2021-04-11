@@ -17,61 +17,13 @@ Nosso desafio não se resume a ferramentas matemáticas, mas sim sobre a constru
 
 Nós precisamos que você escreva uma implementação eficiente de um índice reverso, que indexe uma quantidade grande de documentos.
 
+----
+# Solução
 
+Para a solução do desafio, decidi criar um dicionário, utilizando cada palavra única de cada documento como <b>key</b>. Como <b>value</b>, inseri uma lista de dois index, o index [0] é o <b>wordId</b> e o index [1] é uma lista contendo os documentos que contém aquela palavra.
 
-## 2 - Algoritmo
-### 2.1 Documentos
+Espero que gostem da minha solução para o desafio, e estou aberto para esclarecimentos e desenvolvimento do algoritmo.
 
-Nós temos uma coleção de N documentos. Em nosso caso, nós temos 1 arquivo por documento e o nome do arquivo é simplesmente o número do índice do documento, como mostrado na figura 1.
-<br/>
-<br/>
-![alt text](images/figura_1.png "")
+LinkedIn: [Aqui](https://www.linkedin.com/in/felipe-alima/)
 
-
-### 2.2 Dicionário
-
-Nós queremos um dicionário que realize um **“match”** de cada palavra contida nos documentos com um identificador único **“word_id”**, conforme figura 2.
-<br/>
-<br/>
-![alt text](images/figura_2.png "")
-
-
-### 2.2.1 Índice reverso
-
-Usando ambos o conjunto de dados e dicionário, nós conseguimos construir um índice reverso que dá, para cada palavra, a lista de documentos em que a palavra está contida, veja figura 3.
-<br/>
-<br/>
-![alt text](images/figura_3.png "") 
-  
-
-Nós queremos uma solução que funcione para um grande conjunto de dados.
-
-Estes são os 4 passos do algoritmo:
-
-1. Ler os documentos e recuperar cada par (**wordId**, **documentId**)
-2. Ordenar cada par por **worldId** e **documentId**
-3. Para cada **worldId**, agrupar os pares, para ter a lista de documentos que contém a palavra
-4. Mesclar os resultados intermediários para ter o índice reverso final  
-
-Veja figura 4, etapas do algoritmo.
-<br/>
-<br/>
-![alt text](images/figura_4.png "")
-
-
-**Atenção**: o índice deve ser ordenado pelos identificadores das palavras e para cada identificador de palavra, ordenar a sua respectiva lista de identificadores de documentos. <br/>
-Caso seja de interesse **“Blocked sort-based indexing”**
-
-
-## 3 – Informações
-
-Você encontrará o conjunto de dados de documentos no diretório *dataset* do repositório no GitHub.
-
-1. Implemente um *Job* para construir o dicionário. Cada linha do arquivo de saída deverá ser a palavra seguida de seu identificador (**world_id**). Nos documentos armazenados no diretório *dataset* as palavras estão separadas por um ou mais espaços.
-2. Implemente um ou mais *Jobs* para construir o índice reverso
-
-Você deve usar ou **PySpark ou Python puro** para estes *Jobs*
-
-Em caso de dúvidas, enviar email para: **rangel.souza@projeto22.com.br**
-
-__Boa Sorte!__
+Email: lipe_lim@hotmail.com
